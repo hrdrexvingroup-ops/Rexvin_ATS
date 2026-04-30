@@ -1,0 +1,206 @@
+/* ========================================
+   REXVIN ATS - STYLE.CSS
+   Professional Recruitment UI
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 1280px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+/* FORM */
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 14px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+}
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* UPLOAD BOX */
+.upload-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  background: #f8fafc;
+  padding: 32px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.upload-box p {
+  margin-bottom: 8px;
+}
+
+/* BUTTON */
+.btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background: #f8fafc;
+}
+
+th,
+td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+th {
+  font-weight: 700;
+}
+
+tr:hover {
+  background: #fafcff;
+}
+
+.score {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* STATUS */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .btn {
+    width: 100%;
+    margin-right: 0;
+  }
+}
