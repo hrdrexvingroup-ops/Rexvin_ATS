@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rexvin ATS - Smart CV Matcher</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Rexvin ATS — Smart CV Matcher</h1>
+    <p>CV Matching System | Recruitment Tools</p>
+  </div>
+
+  <div class="container">
+
+    <!-- STEP 1 -->
+    <div class="card">
+      <h2>Step 1 — Input Hiring Requirement</h2>
+
+      <div class="grid">
+        <div>
+          <label>Nama Posisi</label>
+          <input type="text" id="jobTitle" placeholder="Contoh: Finance Supervisor">
+        </div>
+
+        <div>
+          <label>Department</label>
+          <input type="text" id="department" placeholder="Contoh: Finance Department">
+        </div>
+      </div>
+
+      <label>Kualifikasi Kandidat</label>
+      <textarea id="qualification" placeholder="Masukkan kualifikasi kandidat lengkap..."></textarea>
+
+      <label>Job Description / Tanggung Jawab</label>
+      <textarea id="jobdesc" placeholder="Masukkan job description lengkap..."></textarea>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="card">
+      <h2>Step 2 — Upload CV Kandidat</h2>
+
+      <div class="upload-box">
+        <p><strong>Upload Multiple CV</strong></p>
+        <p>Support: PDF, DOCX, DOC</p>
+        <input type="file" id="cvFiles" multiple accept=".pdf,.doc,.docx" style="margin-top:15px;">
+      </div>
+
+      <button class="btn" onclick="startAnalysis()">Analyze Candidate Match</button>
+      <button class="btn" onclick="exportCandidateRankingToExcel()">Export Excel</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="card" id="resultCard" style="display:none;">
+      <h2>Step 3 — Hasil Analisa Kandidat</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Usia</th>
+            <th>Pendidikan</th>
+            <th>Jurusan</th>
+            <th>Alamat</th>
+            <th>Ringkasan Pengalaman</th>
+            <th>Skor Kesesuaian</th>
+          </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- LIBRARIES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <!-- SYSTEM FILES -->
+  <script src="pdf-reader.js"></script>
+  <script src="doc-reader.js"></script>
+  <script src="scoring-engine.js"></script>
+  <script src="groq-api.js"></script>
+  <script src="export-excel.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
